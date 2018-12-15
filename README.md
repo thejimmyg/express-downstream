@@ -1,5 +1,6 @@
-# Downstream
+# Express Downstream
 
 ```
-node bin/downstream.js
+npm install
+PORT=8000 DEBUG=express-downstream,express-downstream:debug node bin/downstream.js
 ```

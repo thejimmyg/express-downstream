@@ -4,14 +4,15 @@ const debugDebug = require('debug')('express-downstream:debug')
 const app = express()
 const mustache = require('mustache')
 const port = process.env.PORT || 8000
+const name = process.env.NAME || 'Express Downstream'
 
 const template = `<html>
   <head>
-    <title>Hello! {{path}}</title>
+    <title>{{name}} {{path}}</title>
     <style>dt {font-weight: bold; }</style>
   </head>
   <body>
-    <h1>Hello! <code>{{path}}</code></h1>
+    <h1>{{name}} <code>{{path}}</code></h1>
     <h2>Method</h2>
     <p><code>{{method}}</code></p>
     <h2>Headers</h2>
@@ -28,7 +29,7 @@ const template = `<html>
       <dd><code>{{value}}</code></dd>
       {{/environment}}
     </dl>
-    <p><a href="https://github.com/thejimmyg/express-downstream">express-downstream</a></p>
+    <p>Based on <a href="https://www.npmjs.com/package/express-downstream">express-downstream</a>.</p>
   </body>
 </html>`
 
@@ -51,6 +52,7 @@ app.all('*', (req, res) => {
     }
   }
   const view = {
+    name,
     path,
     method,
     headers,

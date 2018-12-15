@@ -1,0 +1,21 @@
+{
+  "name": "express-downstream",
+  "version": "0.1.0",
+  "description": "Hello world example to be used as a downstream server",
+  "scripts": {
+    "docker:build": "docker build . -t thejimmyg/express-downstream:latest",
+    "docker:push": "docker push thejimmyg/express-downstream:latest",
+    "docker:run": "docker run -e PORT=8000 -p 8000:8000 thejimmyg/express-downstream:latest",
+    "start": "node bin/express-downstream.js"
+  },
+  "author": "James Gardner",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:thejimmyg/express-downstream.git"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "mustache": "^3.0.1"
+  }
+}

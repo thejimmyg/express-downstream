@@ -5,7 +5,7 @@ RUN mkdir /app
 WORKDIR /app
 COPY package.json /app
 COPY package-lock.json /app
-RUN npm install
+RUN npm install --only=prod
 
 FROM base
 COPY --from=builder /app /app
@@ -16,5 +16,5 @@ ENV PATH="${PATH}:/app/node_modules/.bin"
 ENV PORT=8000
 EXPOSE 8000
 COPY bin/ /app/bin/
-ENTRYPOINT ["node", "bin/downstream.js"]
+ENTRYPOINT ["node", "bin/express-downstream.js"]
 CMD = []

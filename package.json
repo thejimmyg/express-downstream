@@ -1,11 +1,11 @@
 {
   "name": "express-downstream",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Hello world example to be used as a downstream server",
   "scripts": {
-    "docker:build": "docker build . -t thejimmyg/express-downstream:0.1.2",
-    "docker:push": "docker push thejimmyg/express-downstream:0.1.2",
-    "docker:run": "docker run -e PORT=8000 -p 8000:8000 thejimmyg/express-downstream:0.1.2",
+    "docker:build": "docker build . -t thejimmyg/express-downstream:0.1.3",
+    "docker:push": "docker push thejimmyg/express-downstream:0.1.3",
+    "docker:run": "docker run -e PORT=8000 -p 8000:8000 thejimmyg/express-downstream:0.1.3",
     "docker:build:test": "docker build . -t thejimmyg/express-downstream:test",
     "docker:push:test": "docker push thejimmyg/express-downstream:test",
     "docker:run:test": "docker run -e PORT=8000 -p 8000:8000 thejimmyg/express-downstream:test",

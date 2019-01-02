@@ -13,8 +13,8 @@ WORKDIR /app
 ENV NODE_PATH=/app/node_modules
 ENV NODE_ENV=production
 ENV PATH="${PATH}:/app/node_modules/.bin"
-ENV PORT=8000
-EXPOSE 8000
+ENV PORT=80
+EXPOSE 80
 COPY bin/ /app/bin/
 ENTRYPOINT ["node", "bin/express-downstream.js"]
 CMD = []

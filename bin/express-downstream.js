@@ -40,7 +40,7 @@ const template = `<html>
 const makePage = (status) => {
   const page = (req, res) => {
     const path = req.path
-    debug(path, status)
+    debug(name, path, status)
     const method = req.method
     const headers = []
     for (let name in req.headers) {
@@ -66,6 +66,7 @@ const makePage = (status) => {
     }
     const output = mustache.render(template, view)
     debugDebug(view)
+    res.set('X-Name', name)
     res.status(status)
     res.send(output)
   }

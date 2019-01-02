@@ -23,6 +23,10 @@ You can configure the following variables:
 
 ## Changelog
 
+### 0.1.4 2019-01-02
+
+* Show the value of `NAME` for each request (as well as the existing path and status) and show it in the `X-Name` response header
+
 ### 0.1.3 2019-01-02
 
 * Make the 404 and 500 paths configurable too

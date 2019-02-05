@@ -18,6 +18,9 @@
     "type": "git",
     "url": "git@github.com:thejimmyg/express-downstream.git"
   },
+  "bin": {
+    "express-downstream": "bin/express-downstream.js"
+  },
   "dependencies": {
     "debug": "^4.1.0",
     "express": "^4.15.2",
